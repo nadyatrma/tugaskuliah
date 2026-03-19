@@ -1,0 +1,203 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Open Recruitment HIMATIK</title>
+
+<style>
+body{
+    margin:0;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background-color:#A3BFFF;
+}
+
+.header-table{
+    width:100%;
+    background:white;
+    border-collapse:collapse;
+    box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-table td{
+    padding:15px;
+    vertical-align:middle;
+}
+
+.logo{
+    width:120px;
+}
+
+.title{
+    font-size:26px;
+    font-weight:bold;
+    color:#1f3c88;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
+    margin-bottom:50px;
+}
+
+.form-wrapper{
+    width:700px;
+}
+
+.question-box{
+    background:white;
+    padding:20px;
+    margin-bottom:18px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.12);
+}
+
+.question-title{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+input[type=text],
+select,
+textarea{
+    width:100%;
+    padding:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+textarea{
+    resize:vertical;
+    min-height:90px;
+}
+
+.checkbox-group label{
+    display:block;
+    margin:6px 0;
+    cursor:pointer;
+}
+
+.submit-btn{
+    background:#1f3c88;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    font-size:16px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.submit-btn:hover{
+    background:#162c63;
+}
+
+#thankyou{
+    display:none;
+    text-align:center;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+    font-size:24px;
+    font-weight:bold;
+    color:#1f3c88;
+}
+</style>
+</head>
+
+<body>
+
+<table class="header-table">
+<tr>
+<td width="140">
+<img src="imagesform/logohimatik.jpeg" class="logo">
+</td>
+<td>
+<div class="title">
+OPEN RECRUITMENT ANGGOTA BARU - HIMPUNAN MAHASISWA TIK (HIMATIK)<br>
+</div>
+</td>
+</tr>
+</table>
+
+<div class="container">
+<div class="form-wrapper">
+
+<form id="recruitForm">
+
+<div class="question-box">
+<div class="question-title">Nama Lengkap</div>
+<input type="text" required>
+</div>
+
+<div class="question-box">
+<div class="question-title">Program Studi</div>
+<select required>
+<option value="">-- Prodi --</option>
+<option>TMJ</option>
+<option>TMD</option>
+<option>TI</option>
+</select>
+</div>
+
+<div class="question-box">
+<div class="question-title">Semester</div>
+<select required>
+<option value="">-- Semester --</option>
+<option>Semester 2</option>
+<option>Semester 4</option>
+</select>
+</div>
+
+<div class="question-box">
+<div class="question-title">Pilih Divisi (MAX. 2)</div>
+<div class="checkbox-group">
+<label><input type="checkbox"> Divisi A</label>
+<label><input type="checkbox"> Divisi B</label>
+<label><input type="checkbox"> Divisi C</label>
+<label><input type="checkbox"> Divisi D</label>
+<label><input type="checkbox"> Divisi E</label>
+</div>
+</div>
+
+<div class="question-box">
+<div class="question-title">Alasan memilih divisi 1</div>
+<textarea required></textarea>
+</div>
+
+<div class="question-box">
+<div class="question-title">Alasan memilih divisi 2</div>
+<textarea required></textarea>
+</div>
+
+<div class="question-box">
+<div class="question-title">Kontribusi yang ingin diberikan</div>
+<textarea required></textarea>
+</div>
+
+<div class="question-box" style="text-align:center;">
+<button type="submit" class="submit-btn">Submit</button>
+</div>
+
+</form>
+
+<div id="thankyou">
+Terima kasih sudah mendaftar! :)
+</div>
+
+</div>
+</div>
+
+<script>
+document.getElementById("recruitForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    this.style.display="none";
+    document.getElementById("thankyou").style.display="block";
+});
+</script>
+
+</body>
+</html>
